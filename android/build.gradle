@@ -1,0 +1,38 @@
+group 'com.example.gt_verify'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+//        1.6.0.0
+//        implementation(name: 'gysdk-1.6.0.0', ext: 'aar')
+//        implementation(name: 'gtc-1.6.0.0', ext: 'aar')
+//        //添加一键登录
+//        implementation(name: 'elogin-1.6.0.0', ext: 'aar')
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
